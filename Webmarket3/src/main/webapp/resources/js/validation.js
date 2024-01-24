@@ -54,3 +54,16 @@ function CheckAddProduct() {
 
 	 document.newProduct.submit()
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
