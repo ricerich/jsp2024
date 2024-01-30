@@ -5,7 +5,12 @@ public class Basic {
 		
 		BookStore bs1 = new BookStore();
 		
+		bs1.getCon();
 		bs1.selectBookList();
+		bs1.printBookArr();//한꺼번에 출력
+		bs1.printBookArr();//한꺼번에 출력
+		
+		bs1.getCon();
 		bs1.selectCustomerList();
 		
 //		BookStore bs2 = new BookStore();
