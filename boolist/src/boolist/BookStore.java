@@ -109,7 +109,8 @@ public class BookStore
 			
 			stmt = con.createStatement(); // 2
 			
-			rs = stmt.executeQuery("SELECT * FROM book"); // 3
+			int id = 1;
+			rs = stmt.executeQuery("SELECT * FROM book where bookid = "+ id +" "); // 3
 			
 			System.out.println("BOOK ID \tBOOK NAME \t\tPUBLISHER \t\t\tPRICE");
 			
