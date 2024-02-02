@@ -13,8 +13,8 @@
 		String passwd = request.getParameter("passwd");
 		String name = request.getParameter("name");
 
-		ResultSet rs = null;
 		PreparedStatement pstmt = null;		
+		ResultSet rs = null;
 
 		try {
 			String sql = "select id, passwd from member where id = ?";
