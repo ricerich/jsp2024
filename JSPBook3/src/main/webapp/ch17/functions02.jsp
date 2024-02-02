@@ -7,10 +7,13 @@
 </head>
 <body>
 	<c:set var="texts" value="${fn:split('Hello, Java Server Pages!', ' ')}" />
+	
 	<c:forEach var="i" begin="0" end="${fn:length(texts)-1}">
 		<p>text[${i}] =${texts[i]}
 	</c:forEach>
+	
 	<p><c:out value="${fn:join(texts, '-')}" />
+	
 </body>
 </html>
 
