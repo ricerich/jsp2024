@@ -82,6 +82,11 @@
 		 <servlet-name>myController</servlet-name>
  		<url-pattern>/ch18/ControllerServlet</url-pattern>
 	 </servlet-mapping>	
+	 
+	 <context-param>
+	 	<param-name>CHAT_ADDR</param-name>
+	 	<param-value>ws://localhost:8080/JSPBook3</param-value>
+	 </context-param>
 		
 </web-app>
 
