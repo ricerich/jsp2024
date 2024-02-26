@@ -20,6 +20,7 @@
 	</script>
 	<h2>웹소켓 채팅 - 대화명 적용해서 채팅창 띄워주기</h2>
 	대화명 :
+	<img src="img1.png" >
 	<input type="text" id="chatId" />
 	<button onclick="chatWinOpen();">채팅 참여</button>
 </body>
