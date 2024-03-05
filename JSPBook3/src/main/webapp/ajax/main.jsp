@@ -18,13 +18,14 @@
 	
 	function getData()//json 요청
 	{		
-		var form_name = "form_main";
-		var user_id = document.forms[form_name].elements["txt_user_id"].value;
+// 		var form_name = "form_main";
+// 		var user_id = document.forms[form_name].elements["txt_user_id"].value;
+		var user_id = document.form_main.txt_user_id.value;
 		
-		createAJAX(); // createXHR() 메소드 호출
+		createAJAX(); // AJAX 객체 생성
 		
- 		var url = "./testFile.jsp"; //요청 url 설정
-// 		var url = "./testDB.jsp"; //요청 url 설정
+//  		var url = "./testFile.jsp"; //요청 url 설정
+		var url = "./testDB.jsp"; //데이터를 요청 
 		var reqparam = "user_id="+user_id;
 		
 		ajax1.onreadystatechange = resGetData; // 다되면 실행할 함수 등록(호출 아님. 역호출)
@@ -85,18 +86,18 @@
 	{
 	
 		//alert("111")
-		var form_name = "form_main";
-		var user_id = document.forms[form_name].elements["txt_user_id"].value;
+// 		var form_name = "form_main";
+// 		var user_id = document.forms[form_name].elements["txt_user_id"].value;
 		//alert("123");
 // 		if(user_id == "")
 // 		{			
-			
+// 			alert("검색어를 입력해주요!")
 // 			document.forms[form_name].elements["txt_user_id"].focus();
 // 			return;
 // 		}
 // 		else
 // 		{
-			//alert("user_id ");
+// 			alert("user_id ");
 			getData();
 // 		}		
 	}
@@ -115,7 +116,7 @@
 	        <div class="col-sm-6 col-md-3"></div>
 	        <div class="col-sm-6">   
 	        	<div class="input-group mb-3">
-		      		<input type="text" name='txt_user_id' class="form-control" placeholder="ID 입력바람!" aria-label="Recipient's username" aria-describedby="button-addon2" onkeyup='javascript:searchData();'>
+		      		<input type="text" name='txt_user_id' class="form-control" placeholder="ID 입력바람!" aria-label="Recipient's username" aria-describedby="button-addon2" onkeyup='javascript:;'>
 		      		<button class="btn btn-primary" type="button" id="button-addon2" onClick='javascript:searchData();' >Button</button>
 		    	</div>
 		    	<div id='div_res' class="input-group mb-3" >
