@@ -1,0 +1,2 @@
+load test입니다.
+저는 text 파일이에요!

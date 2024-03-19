@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		#result {
+			width: 200px;
+			height: 200px;
+			border: 5px double #6699FF;
+		}
+	</style>
+	<title>jQuery Ajax메소드 - $.post()</title>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(function () 
+		{
+			$("#b1").click(function () 
+			{ //[결과]버튼을 클릭하면 자동실행
+				var req_param = {name: "kingdora", stus: "homebody"}; //요청페이지에 전송할 데이터
+				//process.jsp페이지에 요청데이터를 보낸 후 결과를 반환받음
+				
+				let obj1 = {
+					type: "POST", //전송방식
+					url: "./data/ex05_data.jsp", //요청페이지
+					data: req_param, //전송데이터
+					success: function (response) { //요청페이지를 실행한 결과
+						$("#result").html(response);
+					}
+				}
+				
+				$.ajax(obj1);
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<button id="b1">결과</button>
+	<div id="result"></div>
+</body>
+
+</html>
